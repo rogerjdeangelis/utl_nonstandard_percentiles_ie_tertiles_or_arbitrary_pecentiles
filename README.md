@@ -89,6 +89,16 @@ Calculate the first tertile or arbitrary percentiles.  Keywords: sas sql join me
     |_| |_| |_|\__,_|_|\_\___|   \__,_|\__,_|\__\__,_|
 
     ;
+        options validvarname=upcase;
+    libname sd1 "d:/sd1";
+    data sd1.have;
+      do var=1 to 10000;
+         x=uniform(1234);
+         output;
+      end;
+      drop var;
+    run;quit;
+
 
     For SAS see Process
 
